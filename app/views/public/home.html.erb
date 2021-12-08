@@ -1,0 +1,14 @@
+<h1>Tic tac toc</h1>
+
+<% if signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <br/>
+    <br/>
+    <br/>
+    <%= link_to "Jouer", "/play", method: :get %>
+<% else %>
+    <%= link_to "Login", new_user_session_path, method: :get %>
+<% end %>
+
+
+
